@@ -4,6 +4,7 @@ Our project, AI-Powered Change Impact Analyzer, addresses the inefficiencies in 
 
 We aim to solve this by building an AI-driven tool that provides real-time impact analysis, contextual insights, and predictive risk assessment—enabling faster, smarter, and safer decision-making by leveraging various technologies such as Groq AI, Pinecone, Azure OpenAI to improve stakeholder engagement and satisfaction by providing relevant information and proactive timelines and graphs.
 
+---
 ### Problem Statement
 
 Change decisions in projects are made without real-time impact analysis, leading to delays, inefficiencies, and blind spots.
@@ -14,9 +15,13 @@ Change decisions in projects are made without real-time impact analysis, leading
 
 **Risk:** Lack of predictive analytics leads to high-risk changes being approved, jeopardizing compliance and stability.
 
+---
+
 ### Solution introduction
 
 We are building an AI-powered Change Impact Analyzer that automates the assessment of change requests. By integrating with existing systems and leveraging Azure OpenAI, the tool provides real-time insights, highlights affected stakeholders and processes, and predicts risk levels—enabling faster, data-driven, and safer change decisions.
+
+---
 
 ### Explanation of Each File
 
@@ -38,9 +43,11 @@ We are building an AI-powered Change Impact Analyzer that automates the assessme
     - **index.html**: The HTML file for the model interface.
 - **user_interface.py**: Contains the function to start the chatbot and handle user interactions.
 
-## How the Project Works
+---
 
-### File Flow
+### How the Project Works
+
+#### File Flow
 
 1. **Data Embedding**:
     - **embed_data_from_pickle.py**: Reads data from a `.pkl` file, generates embeddings using Azure OpenAI API, and stores the embeddings in Pinecone.
@@ -59,7 +66,7 @@ We are building an AI-powered Change Impact Analyzer that automates the assessme
     - **static/css/style.css**: The CSS file for styling the chatbot interface.
     - **static/js/script.js**: The JavaScript file for handling user input and displaying responses.
 
-### Preprocessing Steps
+#### Preprocessing Steps
 
 1. **Data Loading**:
     - Load data from various sources such as `.pkl` files, JSONL files, etc.
@@ -70,6 +77,7 @@ We are building an AI-powered Change Impact Analyzer that automates the assessme
 3. **Storing Embeddings**:
     - Store the generated embeddings in Pinecone for efficient querying.
 
+---
 ### Sample Data
 
 To simulate real-world scenarios and validate the AI-Powered Change Impact Analyzer, a comprehensive set of test data has been created across five key domains:
@@ -86,7 +94,7 @@ To simulate real-world scenarios and validate the AI-Powered Change Impact Analy
 
 This structured dataset supports testing of end-to-end impact analysis, risk prediction, and stakeholder communication workflows in the prototype.
 
-
+---
 ### Technologies Used
 **Groq AI:** Used for generating responses using the ChatGroq model.
 **Pinecone:** Used for storing and querying embeddings.
@@ -95,9 +103,11 @@ This structured dataset supports testing of end-to-end impact analysis, risk pre
 **Socket.IO:** Used for real-time communication between the frontend and backend.
 **HTML/CSS:** Used for creating the frontend interface.
 
+---
 ### RAG-Based Approach
 This project uses a Retrieval-Augmented Generation (RAG) approach. The RAG model combines the strengths of retrieval-based and generation-based models. It retrieves relevant documents from a knowledge base (using Pinecone) and uses them to generate more accurate and contextually relevant responses (using Groq AI and Azure OpenAI).
 
+---
 ### Architecture
 The AI-Powered Change Impact Analyzer is designed using a robust, scalable pipeline combining Azure services, OpenAI models, and modern frameworks like LangChain and Flask. Below is a step-by-step breakdown of the architecture:
 
@@ -105,9 +115,11 @@ The AI-Powered Change Impact Analyzer is designed using a robust, scalable pipel
 
 ![alt text](<Pictures/arct dig.jpg>)
 
+---
 ### Sample Input / Output 
 >Refer [input_output.md](input_output.md) file for sample input/output.
 
+---
 ### Project Features
 
 - **Real-Time Impact Analysis** : Automatically evaluates the impact of change requests on processes, departments, and stakeholders.
@@ -126,8 +138,10 @@ The AI-Powered Change Impact Analyzer is designed using a robust, scalable pipel
 
 - **User-Friendly Dashboard**  :   Simple UI for submitting requests and viewing results.
 
-
+---
 
 ### Conclusion
 
 The AI-Powered Change Impact Analyzer streamlines how organizations evaluate the impact of change requests. By combining semantic search, risk analysis, and natural language understanding, the system delivers fast, accurate, and actionable insights. It reduces manual effort, improves decision-making, and enhances compliance by automatically identifying affected processes, departments, and stakeholders. 
+
+---

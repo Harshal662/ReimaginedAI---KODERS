@@ -12,6 +12,7 @@ To solve these challenges, we are building a centralized, AI-powered Change Impa
 
 This solution will streamline processes, empower employees with actionable intelligence, and significantly reduce the operational risks associated with change management.
 
+--- 
 ## Project Structure
 ```
 app.py
@@ -39,7 +40,7 @@ Sample Test Data/
     stakeholder.xlsx
 ```
 
-
+---
 ## How to Run the Project
 
 ### Prerequisites
@@ -78,10 +79,11 @@ Sample Test Data/
 
 5. Open *localhost* in a web browser to interact with the RiskIQ.AI model.
 
+---
 ### Usage
 
 - **Chatbot Interface**: Interact with the RiskIQ.AI model through the web interface. Type/upload a business requirement and fill other fields to receive response from the model.
 - **Embedding Data**: Use the scripts `embed_data_from_pickle.py`, `embed_data.py`, and `embed_jsonl_data.py` to generate embeddings and store them in Pinecone.
 
-
+--- 
 ### For More Detail about Project Achitecture [click here](project.md)
