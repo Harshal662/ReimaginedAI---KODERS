@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koders Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Koders</h2>
+            <h2>RiskIQ.ai</h2>
+            <ul>
+                <li>Change Requests</li>
+                <li>Risk</li>
+                <li>Impact</li>
+                <li>Reports</li>
+                <li>Alerts</li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <section class="card">
+                <h3>New Change Request</h3>
+                <form id="form">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" placeholder="Enter title" />
+                    </div>
+                    <div class="form-group">
+                        <label for="desc">Description</label>
+                        <textarea id="desc" name="desc" placeholder="Enter description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="summary">Summary</label>
+                        <textarea id="summary" name="summary" placeholder="Enter summary"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="reqType">Requirement Types</label>
+                        <select id="reqType" name="reqType">
+                            <option value="">--Select Requirement Types--</option>
+                            <option value="Functional">Functional</option>
+                            <option value="Non-Functional">Non-Functional</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <select id="priority" name="priority">
+                            <option value="">--Select Priority--</option>
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="roles">Roles</label>
+                        <select id="roles" name="roles">
+                            <option value="">--Select Roles--</option>
+                            <option value="Analyst">Analyst</option>
+                            <option value="Data Engineer">Data Engineer</option>
+                            <option value="Data Scientist">Data Scientist</option>
+                            <option value="Engineer">Engineer</option>
+                            <option value="Executive">Executive</option>
+                            <option value="Product Manager">Product Manager</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="departments">Departments</label>
+                        <select id="departments" name="departments">
+                            <option value="">--Select Departments--</option>
+                            <option value="Compliance">Compliance</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Human Resource">Human Resource</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Operations">Operations</option>
+                            <option value="Risk">Risk</option>
+                            <option value="Sales">Sales</option>
+                        </select>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+            <section class="card" id="card-hide">
+                <h3>Risk & Impact Analysis</h3>
+                <div class="table-container">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Risk Level</th>
+                                <td>
+                                    <div class="badge high" id="high"><i class="fas fa-exclamation-circle"></i> High
+                                    </div>
+                                    <div class="badge medium" id="medium"><i class="fas fa-exclamation-triangle"></i>
+                                        Medium</div>
+                                    <div class="badge low" id="low"><i class="fas fa-check-circle"></i> Low</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Impact Score</th>
+                                <td id="imactScore"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Impacted Stakeholder Roles</th>
+                                <td id="impactedStakeholder"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Impacted Departments</th>
+                                <td id="ImpactedDept"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Affected Processes</th>
+                                <td id="AffectedProcesses"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Related Requirements</th>
+                                <td id="relatedRequirements"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Reason for Impact</th>
+                                <td id="ReasonForImpact"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Time to Implement</th>
+                                <td>
+                                    <ul>
+                                        <li>Time to Implement Requirements Gathering: 2 weeks</li>
+                                        <li>Time to Implement Model Integration: 4 weeks</li>
+                                        <li>Time to Implement Stakeholder Training: 3 weeks</li>
+                                        <li>Time to Implement System Testing: 2 weeks</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Short Summary</th>
+                                <td id="ShortSummary"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Input Data Relevance Percentage</th>
+                                <td id="inputDataRelevancePercentage"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+            <section class="card" id="card-hide1">
+
+                <div id="container" style="width:100%; height:400px;"></div>
+
+
+
+            </section>
+            <section class="card" id="card-hide2">
+
+                <div id="container1" style="width:100%; height:400px;"></div>
+
+                <button onclick="download()">Download</button>
+                <button onclick="sendEmail()">Send Email to all stakeholders</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

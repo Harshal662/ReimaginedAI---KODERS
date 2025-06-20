@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  .container {
+    display: flex;
+  }
+  .sidebar {
+    width: 220px;
+    background-color: #fff;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    height: auto;
+  }
+  .sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  .sidebar li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+  }
+  .main {
+    flex: 1;
+    padding: 20px;
+  }
+  .label{
+    padding-bottom: 10px;
+  }
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  button {
+    background-color: #304ffe;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .impact-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .impact-map div {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    background: #eee;
+  }
+  .report {
+    padding-top: 10px;
+  }
+  .report h4 {
+    margin: 0;
+    margin-bottom: 6px;
+  }
+/* Base styles for the badge */
+.badge {
+    display: inline-flex; /* Change to inline-flex for better icon/text alignment */
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+}
+
+/* Badge icon styles */
+.badge i {
+    margin-right: 5px; /* Space between the icon and the text */
+}
+
+/* High status badge */
+.high {
+    background-color: #d9534f; /* Red */
+}
+
+/* Medium status badge */
+.medium {
+    background-color: #f0ad4e; /* Orange */
+}
+
+/* Low status badge */
+.low {
+    background-color: #5bc0de; /* Light Blue */
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+th{
+    width: 200px;
+}
+
+th,td {
+    padding: 15px;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table,th,td {
+    border: 1px solid #ccc;
+}
